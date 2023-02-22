@@ -51,6 +51,8 @@ $ time bert-score -r reference.small.txt -c candidate.small.txt -m xlm-roberta-l
 | medium | 0.915702 | 0.906600 | 0.910944 |
 | large  | 0.916548 | 0.909308 | 0.912751 |
 
+
+### bert-base-multilingual-cased eval
  ```bash
  $ time bert-score -r reference.large.txt -c candidate.large.txt -m bert-base-multilingual-cased
  ```
@@ -66,3 +68,9 @@ $ time bert-score -r reference.medium.txt -c candidate.medium.txt -m bert-base-m
 $ time bert-score -r reference.small.txt -c candidate.small.txt -m bert-base-multilingual-cased
 ```
 `bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.780336 R: 0.766688 F1: 0.772851`
+
+|        | P        | R        | F1       |
+|--------|----------|----------|----------|
+| small  | 0.780336 | 0.766688 | 0.772851 |
+| medium | 0.790484 | 0.775623 | 0.782396 |
+| large  | 0.792963 | 0.780369 | 0.786095 |
