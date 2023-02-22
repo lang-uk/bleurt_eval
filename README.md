@@ -12,6 +12,13 @@ $ python -m bleurt.score_files   -candidate_file=candidate.small.txt   -referenc
 $ python -m bleurt.score_files   -candidate_file=candidate.medium.txt   -reference_file=reference.medium.txt  -bleurt_checkpoint=bleurt/BLEURT-20 -scores_file=scores.medium.txt
 $ python -m bleurt.score_files   -candidate_file=candidate.large.txt   -reference_file=reference.large.txt  -bleurt_checkpoint=bleurt/BLEURT-20 -scores_file=scores.large.txt
 ```
+
+Combined files for the review available at `bleurt.eval.small.csv`, `bleurt.eval.medium.csv` and `bleurt.eval.large.csv`.
+|        | mean               | median             |
+|--------|--------------------|--------------------|
+| small  | 0.5432437893003226 | 0.5374010503292084 |
+| medium | 0.5675271535292268 | 0.5721611678600311 |
+| large  | 0.5906959722489119 | 0.5916261672973633 |
  
 ## bert_score reported on the same data.
 bert_score version 0.3.13
