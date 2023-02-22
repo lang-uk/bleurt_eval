@@ -29,21 +29,23 @@ two multilang models:
  
  ### xlm-roberta-large eval
  ```bash
- $ time bert-score -r expected.txt -c predicted.txt -m xlm-roberta-large
- ```
- 
-`xlm-roberta-large_L17_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.916548 R: 0.909308 F1: 0.912751`
+$ time bert-score -r reference.small.txt -c candidate.small.txt -m xlm-roberta-large
+```
 
+`xlm-roberta-large_L17_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.910866 R: 0.903273 F1: 0.906873`
+
+ 
 ```bash
 $ time bert-score -r reference.medium.txt -c candidate.medium.txt -m xlm-roberta-large
 ```
 `xlm-roberta-large_L17_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.915702 R: 0.906600 F1: 0.910944`
 
-```bash
-$ time bert-score -r reference.small.txt -c candidate.small.txt -m xlm-roberta-large
-```
+ ```bash
+ $ time bert-score -r reference.large.txt -c candidate.large.txt -m xlm-roberta-large
+ ```
+ 
+`xlm-roberta-large_L17_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.916548 R: 0.909308 F1: 0.912751`
 
-`xlm-roberta-large_L17_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.910866 R: 0.903273 F1: 0.906873`
 
 |        | P        | R        | F1       |
 |--------|----------|----------|----------|
@@ -53,21 +55,24 @@ $ time bert-score -r reference.small.txt -c candidate.small.txt -m xlm-roberta-l
 
 
 ### bert-base-multilingual-cased eval
- ```bash
- $ time bert-score -r reference.large.txt -c candidate.large.txt -m bert-base-multilingual-cased
- ```
- 
-`bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.792963 R: 0.780369 F1: 0.786095`
+
+```bash
+$ time bert-score -r reference.small.txt -c candidate.small.txt -m bert-base-multilingual-cased
+```
+`bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.780336 R: 0.766688 F1: 0.772851`
 
 ```bash
 $ time bert-score -r reference.medium.txt -c candidate.medium.txt -m bert-base-multilingual-cased
 ```
 `bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.790484 R: 0.775623 F1: 0.782396`
 
-```bash
-$ time bert-score -r reference.small.txt -c candidate.small.txt -m bert-base-multilingual-cased
-```
-`bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.780336 R: 0.766688 F1: 0.772851`
+
+ ```bash
+ $ time bert-score -r reference.large.txt -c candidate.large.txt -m bert-base-multilingual-cased
+ ```
+ 
+`bert-base-multilingual-cased_L9_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.792963 R: 0.780369 F1: 0.786095`
+
 
 |        | P        | R        | F1       |
 |--------|----------|----------|----------|
