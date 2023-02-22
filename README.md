@@ -26,6 +26,8 @@ two multilang models:
  - xlm-roberta-large, ranked 48
  - bert-base-multilingual-cased, ranked 81
  
+ 
+ ### xlm-roberta-large eval
  ```bash
  $ time bert-score -r expected.txt -c predicted.txt -m xlm-roberta-large
  ```
@@ -42,6 +44,12 @@ $ time bert-score -r reference.small.txt -c candidate.small.txt -m xlm-roberta-l
 ```
 
 `xlm-roberta-large_L17_no-idf_version=0.3.12(hug_trans=4.26.1)_fast-tokenizer P: 0.910866 R: 0.903273 F1: 0.906873`
+
+|        | P        | R        | F1       |
+|--------|----------|----------|----------|
+| small  | 0.910866 | 0.903273 | 0.906873 |
+| medium | 0.915702 | 0.906600 | 0.910944 |
+| large  | 0.916548 | 0.909308 | 0.912751 |
 
  ```bash
  $ time bert-score -r reference.large.txt -c candidate.large.txt -m bert-base-multilingual-cased
